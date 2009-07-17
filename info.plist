@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>mainMenu</key>
+	<dict>
+		<key>items</key>
+		<array>
+			<string>51CF0577-770E-454A-A11D-AE6B4F63C50D</string>
+			<string>0FB90157-FF13-492B-A9B9-D52EE4B77A26</string>
+			<string>FB1201A0-C4E6-486B-A4C5-44B922E418A2</string>
+		</array>
+		<key>submenus</key>
+		<dict>
+			<key>0FB90157-FF13-492B-A9B9-D52EE4B77A26</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>8619BCA7-6D95-43A1-AF8C-B14C527C051D</string>
+					<string>C2565106-AD85-4257-8BE4-547B7233BDEA</string>
+					<string>2F18A3A9-E1CA-4039-81D8-A55EB59EFA67</string>
+					<string>------------------------------------</string>
+					<string>C2F376DE-90CC-4EB5-AA04-916696E989AA</string>
+					<string>201DBAA7-5A37-492F-BB41-E18A181819EA</string>
+					<string>60740BB9-221D-45A5-ACF5-4B02348A6F4B</string>
+				</array>
+				<key>name</key>
+				<string>Install</string>
+			</dict>
+			<key>FB1201A0-C4E6-486B-A4C5-44B922E418A2</key>
+			<dict>
+				<key>items</key>
+				<array>
+					<string>D4AD29F1-78D7-4F21-95F8-7D03995AAB63</string>
+					<string>------------------------------------</string>
+					<string>38FE502D-A9DF-42E1-A6F2-F49F3741D14C</string>
+					<string>7478A658-CBBB-460C-BCD9-1186403A21C8</string>
+					<string>9C00159E-6178-4C51-8D92-0EEF55B57DEF</string>
+					<string>77209242-51A2-4F97-B1C2-F16FE01B3760</string>
+					<string>------------------------------------</string>
+					<string>8C4F3502-0087-40CA-8E97-03F562B2AD28</string>
+					<string>67B0D42C-39AE-4EA9-A04D-9BE86238B20A</string>
+					<string>E1CB7A0C-929E-415A-AA4D-30D65100C20F</string>
+					<string>0D245BE3-A727-4036-A577-5393A3215E64</string>
+				</array>
+				<key>name</key>
+				<string>Launch</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>name</key>
+	<string>Mojo</string>
+	<key>uuid</key>
+	<string>3E17C092-3680-4E6A-AE51-F182DC2ACCDB</string>
+</dict>
+</plist>
