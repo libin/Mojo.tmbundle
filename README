@@ -28,6 +28,7 @@ Features:
  * Commands:
   * Launch the Palm Emulator
   * Package Current Project
+  * Generate new Scene
   * Install Selected Package on Emulator
   * Uninstall Selected Package from Emulator
   * Install Selected Package on Device

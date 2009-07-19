@@ -7,8 +7,12 @@
 
 require 'rubygems'
 require 'json'
+require ENV['TM_SUPPORT_PATH'] + '/lib/textmate'
+require ENV['TM_SUPPORT_PATH'] + '/lib/ui'
+
 require File.dirname(__FILE__) + "/../lib/textmate"
 require File.dirname(__FILE__) + "/../lib/virtualbox"
+require File.dirname(__FILE__) + "/../lib/palminspector"
 
 appinfo_file = "#{ENV['TM_PROJECT_DIRECTORY']}/appinfo.json"
 unless File.exists?(appinfo_file)
@@ -29,8 +33,17 @@ device = ARGV[0] =~ /tcp/ ? 'tcp' : 'usb'
 case ARGV[0]
 when 'launch:emulator'
   VirtualBox.launch_palm_emulator
+when 'generate:new:scene'
+  selection = TextMate::UI.request_string(
+    :title => 'Create new scene',
+    :default => 'name:First',
+    :prompt => 'Parameters for new scene:',
+    :button1 => 'Create'
+  )
+  puts `#{palmsdk_dir}/bin/palm-generate -t new_scene -p "#{selection}" #{ENV['TM_PROJECT_DIRECTORY']}`
+  TextMate.rescan_project
 when 'package'
-  puts `#{palmsdk_dir}/bin/palm-package #{ENV['TM_PROJECT_DIRECTORY']}`
+  puts `#{palmsdk_dir}/bin/palm-package -o #{ENV['TM_PROJECT_DIRECTORY']} #{ENV['TM_PROJECT_DIRECTORY']}`
   TextMate.rescan_project
 when 'install:tcp', 'install:usb'
   if ENV['TM_SELECTED_FILE'] =~ /.*\.ipk$/
@@ -52,6 +65,8 @@ when 'relaunch:tcp', 'relaunch:usb'
   VirtualBox.activate
 when 'launch:tcp:inspector', 'launch:usb:inspector'
   puts `#{palmsdk_dir}/bin/palm-launch -d #{device} -i #{app_id}`
+  VirtualBox.activate
+  PalmInspector.launch
 else
   puts "I don't know how to #{ARGV[0]} yet, can you help me?"
 end

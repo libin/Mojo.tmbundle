@@ -6,10 +6,8 @@
 module TextMate
   class <<self
     def rescan_project
-        `osascript &>/dev/null \
-	        -e 'tell app "SystemUIServer" to activate'; \
-	        osascript &>/dev/null \
-	        -e 'tell app "TextMate" to activate' &`
+        `osascript &>/dev/null -e 'tell app "SystemUIServer" to activate'; \
+          osascript &>/dev/null -e 'tell app "TextMate" to activate' &`
     end
   end
 end
